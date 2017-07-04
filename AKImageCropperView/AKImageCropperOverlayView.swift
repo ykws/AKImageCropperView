@@ -182,15 +182,7 @@ open class AKImageCropperOverlayView: UIView {
          */
         
         addSubview(overlayView)
-        
-        let blurEffect = UIBlurEffect(style: configuration.overlay.blurStyle)
-        let blurEffectView = UIVisualEffectView(effect: blurEffect)
-        blurEffectView.alpha = self.configuration.overlay.blurAlpha
-        
-        blurEffectView.frame = overlayView.bounds
-        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        overlayView.addSubview(blurEffectView)
-        
+
         /* 2. Container view ‹‹ Image view */
         
         containerImageView.addSubview(imageView)
